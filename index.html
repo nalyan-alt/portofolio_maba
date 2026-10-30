@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nuri Aliyanisah — Portfolio</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Inter Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#fafafa',
+              100: '#f4f4f5',
+              200: '#e4e4e7',
+              300: '#d4d4d8',
+              400: '#a1a1aa',
+              500: '#71717a',
+              600: '#52525b',
+              700: '#3f3f46',
+              800: '#27272a',
+              900: '#18181b',
+              950: '#09090b',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #ffffff;
+      color: #09090b;
+    }
+    
+    .bg-grid-pattern {
+      background-image: radial-gradient(#e4e4e7 1px, transparent 1px);
+      background-size: 24px 24px;
+    }
+
+    .glass-card {
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(228, 228, 231, 0.8);
+    }
+  </style>
+</head>
+<body class="font-sans antialiased bg-white text-brand-950 min-h-screen selection:bg-brand-950 selection:text-white relative overflow-x-hidden">
+
+  <!-- Background Subtle Elements -->
+  <div class="fixed inset-0 bg-grid-pattern opacity-60 pointer-events-none z-0"></div>
+  <div class="fixed -top-40 -right-40 w-96 h-96 bg-brand-100 rounded-full blur-3xl pointer-events-none z-0"></div>
+  <div class="fixed top-1/2 -left-40 w-96 h-96 bg-brand-100 rounded-full blur-3xl pointer-events-none z-0"></div>
+
+  <!-- NAVIGATION HEADER -->
+  <header class="fixed top-0 left-0 right-0 z-50 py-4 px-4 sm:px-8">
+    <div class="max-w-5xl mx-auto flex items-center justify-between glass-card rounded-full px-6 py-3 shadow-sm">
+      <!-- Logo / Name Initials -->
+      <a href="#" class="font-bold text-lg tracking-wider text-brand-950 flex items-center gap-2">
+        <span class="w-8 h-8 rounded-full bg-brand-950 text-white flex items-center justify-center text-xs font-black">NA</span>
+        <span>NURI.</span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-brand-600">
+        <a href="#about" class="hover:text-brand-950 transition-colors">About Me</a>
+        <a href="#capabilities" class="hover:text-brand-950 transition-colors">What I Can Do</a>
+        <a href="#achievements" class="hover:text-brand-950 transition-colors">Achievements</a>
+        <a href="#contact" class="hover:text-brand-950 transition-colors">Contact</a>
+      </nav>
+
+      <!-- Action Button -->
+      <a href="#contact" class="hidden sm:inline-flex items-center justify-center px-4 py-2 text-xs font-semibold uppercase tracking-wider text-white bg-brand-950 hover:bg-brand-800 rounded-full transition-all duration-200 hover:shadow-md">
+        Let's Talk
+      </a>
+
+      <!-- Mobile Menu Button -->
+      <button id="menu-btn" class="md:hidden text-brand-950 focus:outline-none" aria-label="Toggle Menu">
+        <i class="fa-solid fa-bars text-xl"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="hidden md:hidden max-w-5xl mx-auto mt-2 glass-card rounded-2xl p-6 shadow-lg flex flex-col space-y-4 text-center text-sm font-medium">
+      <a href="#about" class="mobile-link text-brand-700 hover:text-brand-950">About Me</a>
+      <a href="#capabilities" class="mobile-link text-brand-700 hover:text-brand-950">What I Can Do</a>
+      <a href="#achievements" class="mobile-link text-brand-700 hover:text-brand-950">Achievements</a>
+      <a href="#contact" class="mobile-link text-brand-700 hover:text-brand-950">Contact</a>
+      <a href="#contact" class="mobile-link inline-block px-4 py-2 text-xs font-semibold uppercase tracking-wider text-white bg-brand-950 rounded-full">Let's Talk</a>
+    </div>
+  </header>
+
+  <main class="relative z-10 pt-28 sm:pt-36">
+
+    <!-- HERO / ABOUT ME SECTION -->
+    <section id="about" class="max-w-5xl mx-auto px-4 sm:px-8 py-12">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        
+        <!-- Hero Text & Details -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-brand-200 bg-brand-50 text-xs font-medium text-brand-700">
+            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+            Surabaya State University (UNESA)
+          </div>
+
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-brand-950 leading-[1.15]">
+            Hi, I'm <br>
+            <span class="underline decoration-brand-300 underline-offset-8">Nuri Aliyanisah</span>
+          </h1>
+
+          <!-- Identity Badges (NIM & Prodi) -->
+          <div class="flex flex-wrap gap-3 text-xs font-mono">
+            <span class="px-3 py-1.5 bg-brand-100 text-brand-800 rounded-md font-semibold border border-brand-200">
+              NIM: 26050974143
+            </span>
+            <span class="px-3 py-1.5 bg-brand-950 text-white rounded-md font-semibold">
+              Major: Information Technology Education
+            </span>
+          </div>
+
+          <!-- Self Description -->
+          <p class="text-brand-600 text-base sm:text-lg leading-relaxed max-w-xl">
+            An enthusiastic IT Education student passionate about educational tech, web development, and digital workflows. Dedicated to bridging technology and learning through clean, accessible digital solutions.
+          </p>
+
+          <!-- Current Activities / Status Box -->
+          <div class="grid grid-cols-3 gap-3 pt-2">
+            <div class="p-3 bg-brand-50 rounded-xl border border-brand-200">
+              <span class="text-[10px] font-bold text-brand-400 uppercase tracking-wider block">Building</span>
+              <span class="text-xs font-semibold text-brand-950">Web & EdTech Apps</span>
+            </div>
+            <div class="p-3 bg-brand-50 rounded-xl border border-brand-200">
+              <span class="text-[10px] font-bold text-brand-400 uppercase tracking-wider block">Exploring</span>
+              <span class="text-xs font-semibold text-brand-950">UI/UX & Testing</span>
+            </div>
+            <div class="p-3 bg-brand-50 rounded-xl border border-brand-200">
+              <span class="text-[10px] font-bold text-brand-400 uppercase tracking-wider block">Learning</span>
+              <span class="text-xs font-semibold text-brand-950">Full-Stack Dev</span>
+            </div>
+          </div>
+
+          <!-- Hero Action Buttons -->
+          <div class="flex flex-wrap items-center gap-4 pt-4">
+            <a href="#contact" class="px-6 py-3 bg-brand-950 hover:bg-brand-800 text-white font-medium text-sm rounded-full transition-all flex items-center gap-2 shadow-sm">
+              Contact Me <i class="fa-solid fa-arrow-right text-xs"></i>
+            </a>
+            <button onclick="downloadResume()" class="px-6 py-3 border border-brand-300 hover:border-brand-950 text-brand-950 font-medium text-sm rounded-full transition-all flex items-center gap-2 bg-white">
+              <i class="fa-solid fa-download text-xs"></i> Resume
+            </button>
+          </div>
+        </div>
+
+        <!-- Hero Avatar Card -->
+        <div class="lg:col-span-5 flex justify-center">
+          <div class="relative w-full max-w-sm">
+            <div class="aspect-[4/5] rounded-3xl overflow-hidden bg-brand-100 border border-brand-200 shadow-xl relative group">
+              <!-- Placeholder Image -->
+              <img src="foto web .jpg.jpeg" alt="Nuri Aliyanisah" class="w-full h-full object-cover grayscale contrast-125 group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+              
+              <div class="absolute bottom-6 left-6 right-6 text-white">
+                <p class="text-xs font-mono uppercase tracking-widest text-brand-300">Undergraduate Student</p>
+                <h2 class="text-xl font-bold">Nuri Aliyanisah</h2>
+                <p class="text-xs text-brand-200 mt-1">Universitas Negeri Surabaya</p>
+              </div>
+            </div>
+
+            <!-- Floating Badge -->
+            <div class="absolute -bottom-4 -right-4 glass-card p-4 rounded-2xl shadow-lg border border-brand-200 hidden sm:block">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-brand-950 text-white flex items-center justify-center">
+                  <i class="fa-solid fa-graduation-cap text-sm"></i>
+                </div>
+                <div>
+                  <p class="text-[10px] uppercase font-bold text-brand-400">Education</p>
+                  <p class="text-xs font-bold text-brand-950">PTI UNESA</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- WHAT I CAN DO SECTION -->
+    <section id="capabilities" class="max-w-5xl mx-auto px-4 sm:px-8 py-16">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <p class="text-xs font-mono font-bold uppercase tracking-widest text-brand-500 mb-2">My Capabilities</p>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-950 tracking-tight">What I Can Do</h2>
+        <p class="text-brand-600 text-sm mt-3">Combining technical programming, educational technology, and digital tools to build modern software solutions.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- Skill Card 1: Web Development -->
+        <div class="p-6 rounded-2xl bg-white border border-brand-200 shadow-sm hover:border-brand-950 transition-all duration-300 group">
+          <div class="w-12 h-12 rounded-xl bg-brand-100 group-hover:bg-brand-950 group-hover:text-white text-brand-950 flex items-center justify-center text-xl mb-6 transition-colors">
+            <i class="fa-solid fa-code"></i>
+          </div>
+          <h3 class="text-lg font-bold text-brand-950 mb-2">Web Development</h3>
+          <p class="text-xs text-brand-600 mb-6 leading-relaxed">Designing and developing responsive, fast, and accessible single-page web platforms.</p>
+          
+          <div class="flex flex-wrap gap-2">
+            <span class="px-2.5 py-1 bg-brand-100 text-brand-800 rounded text-xs font-medium">HTML5</span>
+            <span class="px-2.5 py-1 bg-brand-100 text-brand-800 rounded text-xs font-medium">CSS3</span>
+            <span class="px-2.5 py-1 bg-brand-100 text-brand-800 rounded text-xs font-medium">JavaScript</span>
+            <span class="px-2.5 py-1 bg-brand-100 text-brand-800 rounded text-xs font-medium">Tailwind CSS</span>
+          </div>
+        </div>
+
+        <!-- Skill Card 2: Programming & Logic -->
+        <div class="p-6 rounded-2xl bg-white border border-brand-200 shadow-sm hover:border-brand-950 transition-all duration-300 group">
+          <div class="w-12 h-12 rounded-xl bg-brand-100 group-hover:bg-brand-950 group-hover:text-white text-brand-950 flex items-center justify-center text-xl mb-6 transition-colors">
+            <i class="fa-solid fa-laptop-code"></i>
+          </div>
+          <h3 class="text-lg font-bold text-brand-950 mb-2">Programming</h3>
+          <p class="text-xs text-brand-600 mb-6 leading-relaxed">Building logical algorithms, database queries, and structured software foundations.</p>
+          
+          <div class="flex flex-wrap gap-2">
+            <span class="px-2.5 py-1 bg-brand-100 text-brand-800 rounded text-xs font-medium">Python</span>
+            <span class="px-2.5 py-1 bg-brand-100 text-brand-800 rounded text-xs font-medium">C++</span>
+            <span class="px-2.5 py-1 bg-brand-100 text-brand-800 rounded text-xs font-medium">MySQL</span>
+            <span class="px-2.5 py-1 bg-brand-100 text-brand-800 rounded text-xs font-medium">PHP</span>
+          </div>
+        </div>
+
+        <!-- Skill Card 3: Developer Tools -->
+        <div class="p-6 rounded-2xl bg-white border border-brand-200 shadow-sm hover:border-brand-950 transition-all duration-300 group">
+          <div class="w-12 h-12 rounded-xl bg-brand-100 group-hover:bg-brand-950 group-hover:text-white text-brand-950 flex items-center justify-center text-xl mb-6 transition-colors">
+            <i class="fa-solid fa-wrench"></i>
+          </div>
+          <h3 class="text-lg font-bold text-brand-950 mb-2">Tools & EdTech</h3>
+          <p class="text-xs text-brand-600 mb-6 leading-relaxed">Utilizing modern developer environments, version control, and learning platforms.</p>
+          
+          <div class="flex flex-wrap gap-2">
+            <span class="px-2.5 py-1 bg-brand-100 text-brand-800 rounded text-xs font-medium">Git & GitHub</span>
+            <span class="px-2.5 py-1 bg-brand-100 text-brand-800 rounded text-xs font-medium">VS Code</span>
+            <span class="px-2.5 py-1 bg-brand-100 text-brand-800 rounded text-xs font-medium">Figma</span>
+            <span class="px-2.5 py-1 bg-brand-100 text-brand-800 rounded text-xs font-medium">Canva</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="max-w-5xl mx-auto px-4 sm:px-8 py-20 border-t border-brand-200">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-6 space-y-6">
+          <p class="text-xs font-mono font-bold uppercase tracking-widest text-brand-500">Get In Touch</p>
+          <h2 class="text-4xl sm:text-5xl font-black text-brand-950 tracking-tight leading-tight">
+            LET'S WORK <br> TOGETHER.
+          </h2>
+          <p class="text-brand-600 text-sm leading-relaxed max-w-md">
+            I'm always open to new opportunities, educational tech collaborations, or tech discussions. Feel free to reach out directly through any of the platforms!
+          </p>
+          
+          <div class="pt-2">
+            <button onclick="downloadResume()" class="px-6 py-3 bg-brand-950 text-white font-medium text-xs uppercase tracking-wider rounded-full hover:bg-brand-800 transition-all flex items-center gap-2">
+              <i class="fa-solid fa-file-arrow-down"></i> Download Resume
+            </button>
+          </div>
+        </div>
+
+        <div class="lg:col-span-6 space-y-4">
+          <!-- Email Card -->
+          <a href="mailto:nurialya368@gmail.com" class="p-4 rounded-xl border border-brand-200 bg-white hover:border-brand-950 transition-all flex items-center justify-between group">
+            <div class="flex items-center gap-4">
+              <div class="w-10 h-10 rounded-lg bg-brand-100 flex items-center justify-center text-brand-950">
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+              <div>
+                <p class="text-[10px] uppercase font-mono font-bold text-brand-400">Email</p>
+                <p class="text-xs sm:text-sm font-bold text-brand-950">nurialya368@gmail.com</p>
+              </div>
+            </div>
+            <i class="fa-solid fa-arrow-up-right-from-square text-xs text-brand-400 group-hover:text-brand-950 transition-colors"></i>
+          </a>
+
+          <!-- GitHub Card -->
+          <a href="https://github.com/nalyan-alt" target="_blank" rel="noopener noreferrer" class="p-4 rounded-xl border border-brand-200 bg-white hover:border-brand-950 transition-all flex items-center justify-between group">
+            <div class="flex items-center gap-4">
+              <div class="w-10 h-10 rounded-lg bg-brand-100 flex items-center justify-center text-brand-950">
+                <i class="fa-brands fa-github text-lg"></i>
+              </div>
+              <div>
+                <p class="text-[10px] uppercase font-mono font-bold text-brand-400">GitHub</p>
+                <p class="text-xs sm:text-sm font-bold text-brand-950">github.com/nalyan-alt</p>
+              </div>
+            </div>
+            <i class="fa-solid fa-arrow-up-right-from-square text-xs text-brand-400 group-hover:text-brand-950 transition-colors"></i>
+          </a>
+
+          <!-- LinkedIn Card -->
+          <a href="https://linkedin.com/in/NURI ALIYANISAH" target="_blank" rel="noopener noreferrer" class="p-4 rounded-xl border border-brand-200 bg-white hover:border-brand-950 transition-all flex items-center justify-between group">
+            <div class="flex items-center gap-4">
+              <div class="w-10 h-10 rounded-lg bg-brand-100 flex items-center justify-center text-brand-950">
+                <i class="fa-brands fa-linkedin-in text-lg"></i>
+              </div>
+              <div>
+                <p class="text-[10px] uppercase font-mono font-bold text-brand-400">LinkedIn</p>
+                <p class="text-xs sm:text-sm font-bold text-brand-950">linkedin.com/in/NURI ALIYANISAH</p>
+              </div>
+            </div>
+            <i class="fa-solid fa-arrow-up-right-from-square text-xs text-brand-400 group-hover:text-brand-950 transition-colors"></i>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-brand-200 py-8 text-center text-xs text-brand-500">
+    <div class="max-w-5xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center gap-4">
+      <p>© <span id="year"></span> Nuri Aliyanisah. All rights reserved.</p>
+      <p>Universitas Negeri Surabaya — Information Technology Education</p>
+    </div>
+  </footer>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="fixed bottom-6 right-6 px-4 py-3 bg-brand-950 text-white text-xs rounded-xl shadow-xl transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none z-50 flex items-center gap-2">
+    <i class="fa-solid fa-circle-check text-emerald-400"></i>
+    <span>Resume download initiated!</span>
+  </div>
+
+  <script>
+    // Set Current Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile Menu Toggle
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+
+    // Resume Download Simulation
+    function downloadResume() {
+      const toast = document.getElementById('toast');
+      toast.classList.remove('translate-y-20', 'opacity-0');
+      
+      setTimeout(() => {
+        toast.classList.add('translate-y-20', 'opacity-0');
+      }, 3000);
+
+      // Trigger dummy download file
+      const element = document.createElement('a');
+      const file = new Blob([
+        "NURI ALIYANISAH RESUME\n\nNIM: 26050974143\nMajor: Information Technology Education\nInstitution: Universitas Negeri Surabaya\nEmail: nuri.aliyanisah@student.unesa.ac.id"
+      ], {type: 'text/plain'});
+      element.href = URL.createObjectURL(file);
+      element.download = "Nuri_Aliyanisah_Resume.txt";
+      document.body.appendChild(element);
+      element.click();
+      document.body.removeChild(element);
+    }
+  </script>
+</body>
+</html>
